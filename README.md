@@ -18,9 +18,11 @@
 `gpg --full-generate-key`
 
 `1. Select RSA Key Types`
+
 ![alt text](./images/02.png)
 
 `2. Set expire date for the key pairs`
+
 ![alt text](./images/03.png)
 
 `3. Confirm to create key pairs`
