@@ -26,12 +26,15 @@
 ![alt text](./images/03.png)
 
 `3. Confirm to create key pairs`
+
 ![alt text](./images/04.png)
 
 `4. Set passphrase to protect your private key`
+
 ![alt text](./images/05.png)
 
 `5. Key pairs is successfully created in your your home directory of with hidden folder called .gnup`
+
 ![alt text](./images/06.png)
 
 #### Displays all public keys in your GPG keyring, showing them long-format key IDs
