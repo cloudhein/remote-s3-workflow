@@ -51,7 +51,7 @@
 
 #### Exports the public key with your public specified key ID to a binary file
 
-##### replace C7C80C57F21F18C4C4A1C8983CA892CE70FB52C this key id with your public key id you obtained 
+_replace **C7C80C57F21F18C4C4A1C8983CA892CE70FB52C** this key id with **your public key id you obtained**_
 `gpg --export C7C80C57F21F18C4C4A1C8983CA892CE70FB52C > pub_keys/key.bin`
 
 #### Converts the binary public key file into a base64-encoded text file
