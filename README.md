@@ -41,13 +41,18 @@
 
 `gpg --list-keys --keyid-format LONG`
 
+#### Go to backend directory 
+
+`cd backend`
+
 #### Create pub_keys directory to store public keys files
 
 `mkdir pub_keys`
 
-#### Exports the public key with the specified key ID to a binary file
+#### Exports the public key with your public specified key ID to a binary file
 
-`gpg --export C7C80C57F21F18C4C4A1C8983CA892CE70FB52C5 > pub_keys/key.bin`
+##### replace C7C80C57F21F18C4C4A1C8983CA892CE70FB52C this key id with your public key id you obtained 
+`gpg --export C7C80C57F21F18C4C4A1C8983CA892CE70FB52C > pub_keys/key.bin`
 
 #### Converts the binary public key file into a base64-encoded text file
 
@@ -66,7 +71,7 @@
 8. `mkdir priv_keys`
 #####  Retrieves an encrypted secret from Terraform, decodes it from base64, and saves it as a binary file
 9. `terraform output -raw encrypted_secret | base64 --decode > priv_keys/encrypted_secret.gpg`
-##### Decrypts the encrypted secret file using your private key
+##### Decrypts the encrypted secret file using your private key with passphrase you set
 10. `gpg --pinentry-mode loopback --decrypt priv_keys/encrypted_secret.gpg`
 
 
