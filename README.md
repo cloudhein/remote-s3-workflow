@@ -82,17 +82,20 @@ _replace **C7C80C57F21F18C4C4A1C8983CA892CE70FB52C** this key id with **your pub
 
 ![alt text](./images/01.png)
 
-1. Configure profile for S3 backend to store terraform state files
-`aws configure --profile tf-s3-state-handler`
+1. Configure profile for S3 backend to store terraform state files with your access keys from project part 1
 
-2. Create `terraform.tfvars` vars files for storing variable values
+   `aws configure --profile tf-s3-state-handler`
 
-3. `terraform init` 
+3. Modify and add your backend `config of your remote backend s3` in backend.tf file
 
-4. `terraform fmt`
+4. Create `terraform.tfvars` vars files for storing variable values
 
-5. `terraform validate`
+5. `terraform init` 
 
-6. `terraform plan`
+6. `terraform fmt`
 
-7. `terraform apply -auto-approve`
+7. `terraform validate`
+
+8. `terraform plan`
+
+9. `terraform apply -auto-approve`
