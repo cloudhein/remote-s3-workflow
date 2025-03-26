@@ -13,5 +13,9 @@ resource "aws_key_pair" "hc_master_ec2_publickey" {
 resource "local_sensitive_file" "myfile" {
   content         = tls_private_key.hellocloud_sg_keypair.private_key_openssh
   filename        = "${path.module}/generated/hc-master-ec2-privatekey.pem"
-  file_permission = "0422"
+  #file_permission = "0422"
+
+  provisioner "local-exec" {
+    command = "chmod 400 ${path.module}/generated/hc-master-ec2-privatekey.pem"
+  }
 }
