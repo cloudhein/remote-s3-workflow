@@ -1,6 +1,7 @@
+# Creating remote s3 backend to store your terraform state files 
 resource "aws_s3_bucket" "s3_backend" {
   bucket        = var.s3_bucket_name
-  force_destroy = true
+  force_destroy = true # setting boolean value to true is dangerous in production environment for it will delete your remote backend s3 immediately without asking your permission
 
   tags = {
     Name        = var.s3_bucket_name
